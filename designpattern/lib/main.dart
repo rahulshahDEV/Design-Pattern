@@ -1,5 +1,6 @@
 import 'package:designpattern/Factory%20Design%20Pattern/1.dart';
 import 'package:designpattern/Factory%20Design%20Pattern/2.dart';
+import 'package:designpattern/Singleton/1.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,14 +12,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: HomeScreen(),
     );
   }
 }
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  HomeScreen({super.key});
+  late Singleton singleobj = Singleton.getInstance;
+  // Singleton singleobj4 = Singleton.getInstance;
 
   @override
   Widget build(BuildContext context) {
